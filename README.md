@@ -1,9 +1,8 @@
-# Turpsel-POC
+# Leaflet-POC
 
-A quick and a bit dirty POC.
-React.JS, Redux and Leaflet.js for Openstreetmaps.
-
-This POC is done for user-testing.
+* React.js
+* react-leaflet
+* openstreetmaps
 
 ## Available Scripts
 

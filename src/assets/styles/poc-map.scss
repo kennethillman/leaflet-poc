@@ -1,0 +1,91 @@
+  .map-animated-wrapper {
+    width: 100%;
+    height: 100%;
+    border: 0px solid transparent;
+    transform: translate3d(0, 0, 0);
+    position: relative;
+    .position-marked & {
+      width: 320px!important;
+      height: 320px!important;
+      border-radius: 160px;
+    }
+  }
+
+  .map-mask{
+    width: 100%;
+    height: 100%;
+
+   // transition: all 150ms ease-in-out;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+    position: relative;
+    .position-marked & {
+      border: 6px solid #8c1044;
+      width: 320px!important;
+      height: 320px!important;
+      border-radius: 660px;
+    }
+  }
+  
+  .poc-map {
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+     
+    .leaflet-container {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 0px solid transparent;
+    }
+  
+  }
+
+
+.leaflet-marker-pane {
+  transition: all 0.6s cubic-bezier(.17,.67,.26,.99);
+  .marker-hide & {
+    opacity: 0;
+    transform: translateY(-160px);
+  }
+  .marker-animate & {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.leaflet-shadow-pane{
+  transition: all 0.6s cubic-bezier(.17,.67,.26,.99);
+  .marker-hide & {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  .marker-animate & {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+}
+
+.btn-my-location {
+  position: fixed;
+  bottom: 12px;
+  background-color: #8c1044;
+  border-radius: 200px;
+  height: 64px;
+  width: 64px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg {
+    fill: white;
+  }
+
+}
